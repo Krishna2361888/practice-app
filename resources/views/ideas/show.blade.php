@@ -40,7 +40,7 @@
             </div>
             <div class="col-6">
                 
-                <hr>
+            
                 <div class="mt-3">
                    @include('shared.idea-card')
                 </div>
