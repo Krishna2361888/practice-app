@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Idea;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class DashboardController extends Controller
     {
       
         return view('dashboard',[
-            'ideas' => Idea::orderBy('created_at','DESC')->paginate(5)
+            'ideas' => Idea::orderBy('created_at','DESC')->paginate( 5 )
         ]);
     }
 }

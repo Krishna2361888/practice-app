@@ -16,7 +16,7 @@
                 @endforeach
                 {{ $ideas->links() }}
             </div>
-           
+            </div>   
         </div>
 @endsection    
  

@@ -1,23 +1,27 @@
-<div>
+ <div>
+ <form action="{{ route('ideas.comments.store',$idea->id) }}" method="POST">
+        @csrf
                                 <div class="mb-3">
-                                    <textarea class="fs-6 form-control" rows="1"></textarea>
+                                    <textarea name="content" class="fs-6 form-control" rows="1"></textarea>
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary btn-sm"> Post Comment </button>
+                                    <button type="submit" class="btn btn-primary btn-sm"> Post Comment </button>
                                 </div>
+</form>                               
 
                                 <hr>
+                                @foreach($idea->comments as $comment)
                                 <div class="d-flex align-items-start">
                                     
                                     <div class="w-100">
                                         <div class="d-flex justify-content-between">
                                               
-                                            <small class="fs-6 fw-light text-muted"> 3 hour
-                                                ago</small>
+                                            <small class="fs-6 fw-light text-muted"> {{ $comment->created_at }}</small>
                                         </div>
                                         <p class="fs-6 mt-3 fw-light">
-                                            it is loading....
+                                            {{ $comment->content }}
                                         </p>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
