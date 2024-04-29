@@ -42,6 +42,6 @@ class IdeaController extends Controller
 
         $idea->content = request()->get('content','');
         $idea->save();
-        return redirect()->route('ideas.show',$ideas->id)->with('success',"Idea Updated Successfully!");
+        return redirect()->route('ideas.show',$idea->id)->with('success',"Idea Updated Successfully!");
     }
 }
