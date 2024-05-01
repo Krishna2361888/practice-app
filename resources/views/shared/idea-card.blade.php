@@ -2,7 +2,14 @@
                         <div class="px-3 pt-4 pb-2">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    
+                                <div class="d-flex align-items-center">
+                                    <img style="width:50px" class="me-2 avatar-sm rounded-circle"
+                                        src="{{ $idea->user->name }}" alt="{{ $idea->user->name }}">
+                                    <div>
+                                        <h5 class="card-title mb-0"><a href="#"> {{ $idea->user->name }}
+                                            </a></h5>
+                                    </div>
+                                </div>
                                 </div>
                                 <div>
                                     <form method="POST" action="{{ route('idea.destroy' , $idea->id) }}">
