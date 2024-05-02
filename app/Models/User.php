@@ -45,6 +45,9 @@ class User extends Authenticatable
         {
             return $this->hasMany(Idea::class)->latest();
         }
+        public function comments(){
+            return $this->hasMany(Comment::class)->latest();
+        }
     }
     
 
