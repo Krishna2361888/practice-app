@@ -14,18 +14,5 @@
                 </div>
             </div>
         </div>
-        <div class="px-2 mt-4">
-            <div class="d-flex justify-content-start">
-                <a href="#" class="fw-light nav-link fs-6"> <span class="fas fa-comment me-1">
-                    </span> {{ $user->comments()->count() }} </a>
-            </div>
-            @auth()
-                @if (Auth::id() !== $user->id)
-                    <div class="mt-3">
-                        <button class="btn btn-primary btn-sm"> Follow </button>
-                    </div>
-                @endif
-            @endauth
-        </div>
     </div>
 </div>

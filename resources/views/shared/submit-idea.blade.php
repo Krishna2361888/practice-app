@@ -1,7 +1,7 @@
 @auth()                
-                <h4> Share yours ideas </h4>
+                <h4> Post Here  </h4>
                 <div class="row">
-                    <form action="{{ route('ideas.store') }}" method="post">
+                    <form action="{{ route('ideas.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                     <div class="mb-3">
                         <textarea name="content" class="form-control" id="content" rows="3"></textarea>
@@ -9,8 +9,12 @@
                             <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div>
+                        <label>Upload Image</label>
+                        <input type="file" name="img" class="form-control" placeholder="Product Image">
+                    </div>
                     <div class="">
-                        <button type="submit" class="btn btn-dark"> submit </button>
+                        <button type="submit" class="btn btn-dark"> post </button>
                     </div>
                     </form>
                 </div>
