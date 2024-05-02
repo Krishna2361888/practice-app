@@ -13,13 +13,6 @@
                     @endif
                 </div>
             </div>
-            <div>
-                @auth()
-                    @if (Auth::id() === $user->id)
-                        <a href="{{ route('users.edit', $user->id) }}"> Edit</a>
-                    @endif
-                @endauth
-            </div>
         </div>
         <div class="px-2 mt-4">
             <div class="d-flex justify-content-start">
