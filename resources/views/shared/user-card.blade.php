@@ -3,7 +3,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
                 <img style="width:150px" class="me-3 avatar-sm rounded-circle"
-                    src="" alt="test">
+                    src="" alt="img">
                 <div>
                     @if ($editing ?? false)
                         <input value="{{ $user->name }}" type="text" class="form-control">

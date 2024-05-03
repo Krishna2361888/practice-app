@@ -4,7 +4,7 @@
                                 <div class="d-flex align-items-center">
                                 <div class="d-flex align-items-center">
                                     <img style="width:50px" class="me-2 avatar-sm rounded-circle"
-                                        src="{{ $idea->user->name }}" alt="{{ $idea->user->name }}">
+                                        src="" alt="img">
                                     <div>
                                         <h5 class="card-title mb-0"><a href="{{ route('users.show',$idea->user->id) }}"> {{ $idea->user->name }}
                                             </a></h5>
@@ -23,7 +23,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="card-body">
                             @if($editing ?? false)
                             <form action="{{ route('ideas.update', $idea->id) }}" method="post">

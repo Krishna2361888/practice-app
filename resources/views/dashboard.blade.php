@@ -4,8 +4,7 @@
 
         <div class="row">
             <div class="col-3">
-             
-            </div>
+             </div>
             <div class="col-6">
                 @include('shared.submit-idea')
                 <hr>
